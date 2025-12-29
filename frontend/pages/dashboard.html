@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="navbar">
+            <div class="navbar__left">
+                <h1>User Dashboard</h1>
+            </div>
+            <div class="navbar__right">
+                <span id="user-name"></span>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+
+        <div class="dashboard-content">
+            <div class="profile-section">
+                <h2>Profile Information</h2>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> <span id="profile-name"></span></p>
+                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                </div>
+                <button class="btn btn-primary" onclick="showEditForm()">Edit Profile</button>
+            </div>
+
+            <div id="edit-form" class="edit-form hidden">
+                <h3>Edit Your Profile</h3>
+                <form id="update-form">
+                    <input type="text" id="edit-name" placeholder="Name" required>
+                    <input type="email" id="edit-email" placeholder="Email" required>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-secondary" onclick="hideEditForm()">Cancel</button>
+                </form>
+                <div id="update-error" class="error-message"></div>
+            </div>
+
+            <div class="danger-zone">
+                <h2>Danger Zone</h2>
+                <button class="btn btn-danger" onclick="deleteAccount()">Delete Account</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

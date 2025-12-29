@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - MyApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <a href="home.html" class="navbar__logo">MyApp</a>
+            <ul class="navbar__links">
+                <li><a href="../pages/dashboard.html" class="navbar__link">Dashboard</a></li>
+                <li><a href="settings.html" class="navbar__link active">Settings</a></li>
+            </ul>
+            <div class="navbar__auth">
+                <button class="navbar__btn logout" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="settings-container">
+                <h1 style="text-align: center; margin-bottom: 40px; font-size: 32px; animation: slideInDown 0.5s ease-out;">User Settings</h1>
+
+                <div class="settings-section">
+                    <h2 class="settings-section__title">Account Settings</h2>
+                    <div class="settings-option">
+                        <label class="settings-label">Email Notifications</label>
+                        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+                    </div>
+                    <div class="settings-option">
+                        <label class="settings-label">Marketing Emails</label>
+                        <div class="toggle-switch" onclick="toggleSetting(this)"></div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h2 class="settings-section__title">Preferences</h2>
+                    <div class="settings-option">
+                        <label class="settings-label">Theme</label>
+                        <select class="select-dropdown">
+                            <option>Light Mode</option>
+                            <option>Dark Mode</option>
+                            <option>Auto</option>
+                        </select>
+                    </div>
+                    <div class="settings-option">
+                        <label class="settings-label">Language</label>
+                        <select class="select-dropdown">
+                            <option>English</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                            <option>German</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h2 class="settings-section__title">Privacy & Security</h2>
+                    <div class="settings-option">
+                        <label class="settings-label">Two-Factor Authentication</label>
+                        <div class="toggle-switch" onclick="toggleSetting(this)"></div>
+                    </div>
+                    <div class="settings-option">
+                        <label class="settings-label">Profile Visibility</label>
+                        <select class="select-dropdown">
+                            <option>Public</option>
+                            <option>Friends Only</option>
+                            <option>Private</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 MyApp. All rights reserved.</p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Privacy Policy</a>
+                <a href="#" class="footer__link">Terms of Service</a>
+                <a href="contact.html" class="footer__link">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@ const app = express()
 // Middleware
 app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // Connect to MongoDB
 connectDB()
@@ -18,9 +19,14 @@ connectDB()
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
 
+// Health check endpoint
+app.get("/api/health", (req, res) => {
+  res.json({ status: "Server is running" })
+})
+
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error(err.stack)
+  console.error("[v0] Error:", err.stack)
   res.status(500).json({ message: "Server error", error: err.message })
 })
 

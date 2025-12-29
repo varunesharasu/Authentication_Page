@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MyApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <a href="home.html" class="navbar__logo">MyApp</a>
+            <ul class="navbar__links">
+                <li><a href="home.html" class="navbar__link">Home</a></li>
+                <li><a href="products.html" class="navbar__link active">Products</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+            <div class="navbar__auth">
+                <button class="navbar__btn" onclick="window.location.href='../index.html'">Sign In</button>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="hero">
+                <h1 class="hero__title">Our Products</h1>
+                <p class="hero__description">Explore our premium solutions designed for you</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section__title">Featured Products & Services</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card__icon">💼</div>
+                        <h3 class="card__title">Business Pro</h3>
+                        <p class="card__description">Complete solution for managing business operations with advanced analytics and reporting</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">👥</div>
+                        <h3 class="card__title">Team Collaboration</h3>
+                        <p class="card__description">Real-time collaboration tools to keep your team connected and productive</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">📊</div>
+                        <h3 class="card__title">Analytics Suite</h3>
+                        <p class="card__description">Deep insights and comprehensive data analysis for informed decision making</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">🎯</div>
+                        <h3 class="card__title">Goal Tracking</h3>
+                        <p class="card__description">Set, track, and achieve your objectives with our intelligent goal management system</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">🌐</div>
+                        <h3 class="card__title">Cloud Integration</h3>
+                        <p class="card__description">Seamless integration with popular cloud platforms and services</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">🔧</div>
+                        <h3 class="card__title">Custom Solutions</h3>
+                        <p class="card__description">Tailored solutions built specifically for your unique business needs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 MyApp. All rights reserved.</p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Privacy Policy</a>
+                <a href="#" class="footer__link">Terms of Service</a>
+                <a href="contact.html" class="footer__link">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>
